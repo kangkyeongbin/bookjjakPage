@@ -1,0 +1,414 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1080, user-scalable=no">
+    <title>Design Preview</title>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        #imbd {
+            object-fit:initial;
+            height:248px;
+            left:0px;
+            top:0px;
+            width:248px;
+        }
+        #iq8jh {
+            transform: translateX(0px) translateY(-121px);
+        }
+        #it7ui {
+            transform: translateX(0px) translateY(-79px);
+        }
+        #ilybj {
+            aspect-ratio:5/4;
+        }
+        #ithxg {
+            aspect-ratio:3/2;
+        }
+        #iyk39 {
+            aspect-ratio:3/2;
+        }
+        #imauv {
+            aspect-ratio:3/2;
+        }
+        #iohxi {
+            aspect-ratio:3/2;
+        }
+        #imq4bu {
+            margin-bottom:40px;
+        }
+        :root {
+            --brand-primary:#FFF9EA;
+            --brand-secondary:#89B980;
+            --brand-text:#333333;
+            --ui-surface:#FFFFFF;
+            --ui-text-secondary:#666666;
+            background-color:var(--brand-primary);
+        }
+        * {
+            box-sizing:border-box;
+            margin-top:0px;
+            margin-right:0px;
+            margin-bottom:0px;
+            margin-left:0px;
+            padding-top:0px;
+            padding-right:0px;
+            padding-bottom:0px;
+            padding-left:0px;
+        }
+        body {
+            background-color:rgb(51, 51, 51);
+            font-family:"Noto Sans KR", sans-serif;
+            color:var(--brand-text);
+            -webkit-font-smoothing:antialiased;
+            word-break:keep-all;
+            line-height:1.6;
+        }
+        .poster-container {
+            width:1080px;
+            margin-top:0px;
+            margin-right:auto;
+            margin-bottom:0px;
+            margin-left:auto;
+            position:relative;
+            background-color:var(--brand-primary);
+            display:flex;
+            flex-direction:column;
+            overflow-x:hidden;
+            overflow-y:hidden;
+        }
+        section {
+            position:relative;
+            width:100%;
+        }
+        .bg-primary {
+            background-color:var(--brand-primary);
+        }
+        .bg-surface {
+            background-color:var(--ui-surface);
+        }
+        .img-wrap {
+            width:100%;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            overflow-x:hidden;
+            overflow-y:hidden;
+            position:relative;
+        }
+        .img-wrap img {
+            width:100%;
+            height:100%;
+            object-fit:cover;
+            display:block;
+        }
+        .img-wrap.contain img {
+            object-fit:contain;
+        }
+        .text-center {
+            text-align:center;
+        }
+        .title-main {
+            font-size:36px;
+            font-weight:700;
+            letter-spacing:-0.5px;
+            margin-bottom:16px;
+            color:var(--brand-text);
+        }
+        .subtitle {
+            font-size:24px;
+            font-weight:400;
+            color:var(--ui-text-secondary);
+            letter-spacing:-0.3px;
+        }
+        .accent-text {
+            color:var(--brand-secondary);
+            font-size:22px;
+            font-weight:700;
+            letter-spacing:0.5px;
+            margin-bottom:16px;
+        }
+        .header-section {
+            padding-top:120px;
+            padding-right:60px;
+            padding-bottom:80px;
+            padding-left:60px;
+            display:flex;
+            flex-direction:column;
+            align-items:center;
+        }
+        .section-padding {
+            padding-top:100px;
+            padding-right:60px;
+            padding-bottom:100px;
+            padding-left:60px;
+        }
+        .spacer-text {
+            padding-top:70px;
+            padding-right:0px;
+            padding-bottom:70px;
+            padding-left:0px;
+            text-align:center;
+        }
+        .spacer-text .subtitle {
+            font-size:20px;
+            letter-spacing:3px;
+            font-weight:500;
+        }
+        .footer-text {
+            padding-top:80px;
+            padding-right:60px;
+            padding-bottom:140px;
+            padding-left:60px;
+            display:flex;
+            flex-direction:column;
+            align-items:center;
+            row-gap:40px;
+            column-gap:40px;
+        }
+        .grid-2x2 {
+            display:grid;
+            grid-template-columns:1fr 1fr;
+            row-gap:24px;
+            column-gap:24px;
+            padding-top:40px;
+            padding-right:60px;
+            padding-bottom:40px;
+            padding-left:60px;
+        }
+        .grid-2x2 .img-wrap {
+            aspect-ratio:1 / 1;
+            background-color:var(--brand-primary);
+        }
+        .grid-2x1 {
+            display:grid;
+            grid-template-columns:1fr 1fr;
+            row-gap:24px;
+            column-gap:24px;
+            padding-top:40px;
+            padding-right:60px;
+            padding-bottom:40px;
+            padding-left:60px;
+        }
+        .grid-2x1 .img-wrap {
+            aspect-ratio:1 / 1;
+            background-color:var(--brand-primary);
+            border-top-left-radius:16px;
+            border-top-right-radius:16px;
+            border-bottom-right-radius:16px;
+            border-bottom-left-radius:16px;
+        }
+        .grid-2x2-gap {
+            display:grid;
+            grid-template-columns:1fr 1fr;
+            row-gap:32px;
+            column-gap:24px;
+            padding-top:0px;
+            padding-right:60px;
+            padding-bottom:80px;
+            padding-left:60px;
+        }
+        .grid-2x2-gap .img-wrap {
+            aspect-ratio:4 / 5;
+            background-color:var(--brand-primary);
+        }
+        .img-wrap-pad {
+            padding-top:0px;
+            padding-right:60px;
+            padding-bottom:0px;
+            padding-left:60px;
+            margin-bottom:40px;
+        }
+        .img-wrap-pad img {
+            border-top-left-radius:16px;
+            border-top-right-radius:16px;
+            border-bottom-right-radius:16px;
+            border-bottom-left-radius:16px;
+        }
+        .overlay-bottom {
+            position:absolute;
+            bottom:60px;
+            left:0px;
+            width:100%;
+            text-align:center;
+            z-index:10;
+        }
+        .overlay-bottom p {
+            display:inline-block;
+            background-color:rgba(255, 255, 255, 0.95);
+            padding-top:20px;
+            padding-right:40px;
+            padding-bottom:20px;
+            padding-left:40px;
+            border-top-left-radius:40px;
+            border-top-right-radius:40px;
+            border-bottom-right-radius:40px;
+            border-bottom-left-radius:40px;
+            font-size:24px;
+            font-weight:700;
+            color:var(--brand-text);
+            box-shadow:rgba(0, 0, 0, 0.08) 0px 4px 16px;
+        }
+        .overlay-center {
+            position:absolute;
+            top:50%;
+            left:50%;
+            transform:translate(-50%, -50%);
+            width:80%;
+            text-align:center;
+            z-index:10;
+        }
+        .overlay-center p {
+            display:inline-block;
+            background-color:rgba(255, 255, 255, 0.95);
+            padding-top:24px;
+            padding-right:50px;
+            padding-bottom:24px;
+            padding-left:50px;
+            border-top-left-radius:20px;
+            border-top-right-radius:20px;
+            border-bottom-right-radius:20px;
+            border-bottom-left-radius:20px;
+            font-size:28px;
+            font-weight:700;
+            color:var(--brand-text);
+            box-shadow:rgba(0, 0, 0, 0.12) 0px 8px 30px;
+        }
+        .icon-container {
+            width:100px;
+            height:100px;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            font-size:60px;
+            color:var(--brand-secondary);
+            margin-bottom:30px;
+        }
+        .logo-image {
+            width:150px;
+            height:150px;
+            margin-bottom:20px;
+        }
+        </style>
+</head>
+<body>
+    <div class="poster-container">
+        <!-- Section 1: Header Text -->
+        <section data-section-id="1" class="bg-primary">
+            <div class="header-section text-center">
+                <div class="img-wrap contain logo-image"><img src="https://piccopilot.oss-accelerate.aliyuncs.com/product/default/056a1703a6c2469288036a331cb72c5b.png?Expires=2100698965&amp;OSSAccessKeyId=LTAI5tAt4VGUZ2t5U68W4uFh&amp;Signature=p8tCsEEvH8VSrhDBEzgdEPuLsGI%3D" alt="Brand Logo" data-img-id="img_logo_1" class="img-logo" style="object-fit:initial;height:248px;left:0px;top:0px;width:248px;"/></div>
+                <div class="icon-container"></div>
+                <h1 data-text-id="section_1_title" class="title-main" style="transform: translateX(0px) translateY(-121px);">책 한 권, 끝까지 읽어본 적 있나요?</h1>
+                <p data-text-id="section_1_subtitle" class="subtitle" style="transform: translateX(0px) translateY(-79px);">작심삼일 독서러를 위한 확실한 처방전</p>
+            </div>
+        </section>
+        <!-- Section 2: Hero Image -->
+        <section data-section-id="2" class="bg-surface">
+            <div class="img-wrap" style="aspect-ratio:5/4;"><img src="https://piccopilot.oss-accelerate.aliyuncs.com/product/generatePic/9f516f4eb75e4ad4a9d7ed5ade11cd9a.png?Expires=2100696011&amp;OSSAccessKeyId=LTAI5tAt4VGUZ2t5U68W4uFh&amp;Signature=UWZFLbgbefCuhbyyo8oxHZ33P3c%3D" alt="NFC 키링, 독서 노트 팸플릿, 스마트폰이 놓인 편안한 분위기의 메인 이미지" data-img-id="img_02_1" class="img-main"/></div>
+        </section>
+        <!-- Section 3: Selling Points Grid -->
+        <section data-section-id="3" class="bg-surface">
+            <div class="grid-2x2">
+                <div class="img-wrap"><img src="https://piccopilot.oss-accelerate.aliyuncs.com/product/generatePic/df9cb03174a548d99cfc8a3c6556aaed.png?Expires=2100696011&amp;OSSAccessKeyId=LTAI5tAt4VGUZ2t5U68W4uFh&amp;Signature=JlUhZlM%2B4XM5k5ZQSkm1X21ycVE%3D" alt="아이보리색 텍스처 배경 위에 놓인 귀여운 마스코트 NFC 키링" data-img-id="img_03_1" class="img-main"/></div>
+                <div class="img-wrap"><img src="https://piccopilot.oss-accelerate.aliyuncs.com/product/generatePic/963a13546df94745887fde1b3cab5c63.png?Expires=2100696011&amp;OSSAccessKeyId=LTAI5tAt4VGUZ2t5U68W4uFh&amp;Signature=o4YlUhr2S7JoGuQYC6rLTQvbZ1k%3D" alt="몰입형 독서 타이머가 켜져 있는 스마트폰 화면" data-img-id="img_03_2" class="img-main"/></div>
+                <div class="img-wrap"><img src="https://piccopilot.oss-accelerate.aliyuncs.com/product/generatePic/3632d8caa6f1426480af70c6ba8ae5d2.png?Expires=2100696011&amp;OSSAccessKeyId=LTAI5tAt4VGUZ2t5U68W4uFh&amp;Signature=o5NrLCCYrd8%2BwceFY0Q7bI0ntao%3D" alt="정돈된 디자인의 30일 독서 습관 캘린더 팸플릿" data-img-id="img_03_3" class="img-main"/></div>
+                <div class="img-wrap"><img src="https://piccopilot.oss-accelerate.aliyuncs.com/product/generatePic/d0d7c5e1b3f5494793601636dfeb97cf.png?Expires=2100696011&amp;OSSAccessKeyId=LTAI5tAt4VGUZ2t5U68W4uFh&amp;Signature=EW2hvXQHaE%2Bo%2FxPWOtp4UaRMsJY%3D" alt="독서 인증과 알록달록한 기록이 표시된 앱 화면" data-img-id="img_03_4" class="img-main"/></div>
+            </div>
+        </section>
+        <!-- Section 4: Section Text 1 -->
+        <section data-section-id="4" class="bg-primary">
+            <div class="section-padding text-center">
+                <p data-text-id="section_4_gold_text" class="accent-text">30 DAYS CHALLENGE</p>
+                <h2 data-text-id="section_4_title" class="title-main">NFC 태그 한 번으로 시작하는 즐거운 미션</h2>
+                <p data-text-id="section_4_subtitle" class="subtitle">매일매일 달라지는 소소한 랜덤 미션으로 독서의 허들을 낮춰요</p>
+            </div>
+        </section>
+        <!-- Section 5: NFC Tagging Shot -->
+        <section data-section-id="5" class="bg-surface">
+            <div class="img-wrap" style="aspect-ratio:3/2;"><img src="https://piccopilot.oss-accelerate.aliyuncs.com/product/generatePic/c2ae1ded51414c8783db7f4f145d705a.png?Expires=2100696011&amp;OSSAccessKeyId=LTAI5tAt4VGUZ2t5U68W4uFh&amp;Signature=X4o1uB9Eu8UPBpGoCu0%2BBAERG4k%3D" alt="스마트폰을 마스코트 책 키링에 태그하는 손의 클로즈업" data-img-id="img_05_1" class="img-main"/></div>
+        </section>
+        <!-- Section 6: Mission Example (Macro) -->
+        <section data-section-id="6" class="bg-surface">
+            <div class="img-wrap" style="aspect-ratio:3/2;">
+                <img src="https://piccopilot.oss-accelerate.aliyuncs.com/product/generatePic/85b7b9189c14461692a46af21f1d13c7.png?Expires=2100696011&amp;OSSAccessKeyId=LTAI5tAt4VGUZ2t5U68W4uFh&amp;Signature=QuD4Htyt0frqNjAuo9XFZ4PSJGE%3D" alt="스마트폰 화면에 뜬 귀여운 랜덤 독서 미션 팝업" data-img-id="img_06_1" class="img-main"/>
+                <div class="overlay-bottom">
+                    <p data-text-id="section_6_overlay_text">'오늘은 딱 15분만 읽어볼까요?'</p>
+                </div>
+            </div>
+        </section>
+        <!-- Section 7: Detail Action Grid -->
+        <section data-section-id="7" class="bg-surface">
+            <div class="grid-2x1">
+                <div class="img-wrap"><img src="https://piccopilot.oss-accelerate.aliyuncs.com/product/generatePic/28b68feb15bf46aaa1f55710fa3cbea9.png?Expires=2100696011&amp;OSSAccessKeyId=LTAI5tAt4VGUZ2t5U68W4uFh&amp;Signature=kh3W3WQ2KseRozH6F8vLA6T28Vk%3D" alt="펜을 들고 독서 노트 팸플릿에 책 제목을 적고 있는 모습" data-img-id="img_07_1" class="img-main"/></div>
+                <div class="img-wrap"><img src="https://piccopilot.oss-accelerate.aliyuncs.com/product/generatePic/c7ecec06c4974586935111fd436bfdcc.png?Expires=2100696011&amp;OSSAccessKeyId=LTAI5tAt4VGUZ2t5U68W4uFh&amp;Signature=amn8FSYB46yXm6ddV7ORDV08cHE%3D" alt="미션을 성공적으로 마치고 환호하는 앱 캐릭터 그래픽" data-img-id="img_07_2" class="img-main"/></div>
+            </div>
+        </section>
+        <!-- Section 8: Section Text 2 -->
+        <section data-section-id="8" class="bg-primary">
+            <div class="section-padding text-center">
+                <p data-text-id="section_8_gold_text" class="accent-text">SENSUOUS PIXEL MOOD</p>
+                <h2 data-text-id="section_8_title" class="title-main">기록하고 공유하는 나만의 독서 라이프</h2>
+                <p data-text-id="section_8_subtitle" class="subtitle">감성 픽셀 디자인으로 꾸미는 나만의 아기자기한 서재</p>
+            </div>
+        </section>
+        <!-- Section 9: Lifestyle Grid -->
+        <section data-section-id="9" class="bg-surface">
+            <div class="grid-2x2-gap">
+                <div class="img-wrap"><img src="https://piccopilot.oss-accelerate.aliyuncs.com/product/generatePic/7d9353f739c34551b36149ef94bdbd1d.png?Expires=2100696011&amp;OSSAccessKeyId=LTAI5tAt4VGUZ2t5U68W4uFh&amp;Signature=9H57nY0FnzXuAvpDR8OzbBCpXE0%3D" alt="포근한 침대에서 편안하게 책을 읽고 있는 모습" data-img-id="img_09_1" class="img-main"/></div>
+                <div class="img-wrap"><img src="https://piccopilot.oss-accelerate.aliyuncs.com/product/generatePic/dc9e4848f3334fbb9a88aef4393bbbad.png?Expires=2100696011&amp;OSSAccessKeyId=LTAI5tAt4VGUZ2t5U68W4uFh&amp;Signature=PZbSdmeiaQZx%2BsTmuAyav0JUHtw%3D" alt="카페에서 독서하는 풍경과 캔버스 백의 마스코트 키링" data-img-id="img_09_2" class="img-main"/></div>
+                <div class="img-wrap"><img src="https://piccopilot.oss-accelerate.aliyuncs.com/product/generatePic/2faf82e4da5b4e03aa1bf18b5bdacb99.png?Expires=2100696011&amp;OSSAccessKeyId=LTAI5tAt4VGUZ2t5U68W4uFh&amp;Signature=FUMRtG4JA6wEC20EXceGsjMOIRA%3D" alt="지하철 출근길에 앱으로 독서 시간을 기록하는 모습" data-img-id="img_09_3" class="img-main"/></div>
+                <div class="img-wrap"><img src="https://piccopilot.oss-accelerate.aliyuncs.com/product/generatePic/50b00b9fc585490d9bcd1b3a958f84c0.png?Expires=2100696011&amp;OSSAccessKeyId=LTAI5tAt4VGUZ2t5U68W4uFh&amp;Signature=Bw98xfYeWT%2FpKIafUlh%2Fl2S1Iog%3D" alt="독서를 인증하기 위해 책 표지를 사진 찍는 모습" data-img-id="img_09_4" class="img-main"/></div>
+            </div>
+        </section>
+        <!-- Section 10: Spacer Text 1 -->
+        <section data-section-id="10" class="bg-surface">
+            <div class="spacer-text">
+                <p data-text-id="section_10_subtitle" class="subtitle">PERFECT REWARD</p>
+            </div>
+        </section>
+        <!-- Section 11: Calendar Completion Shot -->
+        <section data-section-id="11" class="bg-surface">
+            <div class="img-wrap-pad">
+                <div class="img-wrap" style="aspect-ratio:3/2;"><img src="https://piccopilot.oss-accelerate.aliyuncs.com/product/generatePic/50d17fafb3864bef8c40e7a3b9c9a932.png?Expires=2100696011&amp;OSSAccessKeyId=LTAI5tAt4VGUZ2t5U68W4uFh&amp;Signature=p0ecaMsQMr9vcWkn3O9LNXNIlBY%3D" alt="스티커로 가득 채워져 완성된 30일 독서 습관 캘린더 팸플릿" data-img-id="img_11_1" class="img-main"/></div>
+            </div>
+        </section>
+        <!-- Section 12: Digital Reward Overlay Image -->
+        <section data-section-id="12" class="bg-surface">
+            <div class="img-wrap" style="aspect-ratio:3/2;">
+                <img src="https://piccopilot.oss-accelerate.aliyuncs.com/product/generatePic/2167ea4bb8d64258becf2ea2b1f99d92.png?Expires=2100696011&amp;OSSAccessKeyId=LTAI5tAt4VGUZ2t5U68W4uFh&amp;Signature=vxfgiZjJ3Gf9Pa4aTbHt7VqbSvc%3D" alt="독서 노트 템플릿, 배지, 픽셀 아이템이 표시된 디지털 보상 화면" data-img-id="img_12_1" class="img-main"/>
+                <div class="overlay-center">
+                    <p data-text-id="section_12_overlay_text">30일 연속 달성 시, 특별한 선물이 쏟아져요!</p>
+                </div>
+            </div>
+        </section>
+        <!-- Section 13: Spacer Text 2 -->
+        <section data-section-id="13" class="bg-surface">
+            <div class="spacer-text">
+                <p data-text-id="section_13_subtitle" class="subtitle">KEEP READING</p>
+            </div>
+        </section>
+        <!-- Section 14: Quality Detail Grid -->
+        <section data-section-id="14" class="bg-surface">
+            <div class="grid-2x1" style="margin-bottom:40px;">
+                <div class="img-wrap"><img src="https://piccopilot.oss-accelerate.aliyuncs.com/product/generatePic/11d14cf0783646a895c5592fa8c47434.png?Expires=2100696011&amp;OSSAccessKeyId=LTAI5tAt4VGUZ2t5U68W4uFh&amp;Signature=scg%2BJd2Hy4qLW8bZ7u8fwA3p9rk%3D" alt="귀여운 마스코트 키링의 고화질 클로즈업" data-img-id="img_14_1" class="img-main"/></div>
+                <div class="img-wrap"><img src="https://piccopilot.oss-accelerate.aliyuncs.com/product/generatePic/baed4a13672549db8ed860e6463d1520.png?Expires=2100696011&amp;OSSAccessKeyId=LTAI5tAt4VGUZ2t5U68W4uFh&amp;Signature=5JwZBSgZcBqOgflo9zxTlAooj4M%3D" alt="독서 노트 팸플릿의 매크로 샷" data-img-id="img_14_2" class="img-main"/></div>
+            </div>
+        </section>
+        <!-- Section 15: Footer Text -->
+        <section data-section-id="15" class="bg-primary">
+            <div class="footer-text">
+                <p data-text-id="section_15_subtitle" class="subtitle">북짝북짝과 함께 당신만의 독서 이야기를 완성하세요</p>
+                <div class="img-wrap contain logo-image"><img src="https://piccopilot.oss-accelerate.aliyuncs.com/product/originPic/8de2932a7afa4a5fb29266b0e5b6b6d4.jpeg?Expires=2100696011&amp;OSSAccessKeyId=LTAI5tAt4VGUZ2t5U68W4uFh&amp;Signature=6aDkLs3KN0JdG3sz5ZNYnSV1z4M%3D&amp;x-oss-process=image%2Fresize%2Ch_220%2Climit_0" alt="Brand Logo Footer" data-img-id="img_logo_2" class="img-logo"/></div>
+            </div>
+        </section>
+    </div></body>
+</html>
