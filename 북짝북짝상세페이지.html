@@ -498,6 +498,101 @@
             color:var(--brand-text);
             margin-bottom:12px;
         }
+        .reward-banner {
+            display:block;
+            background-color:var(--brand-text);
+            color:rgb(255, 255, 255);
+            font-size:32px;
+            font-weight:700;
+            text-align:center;
+            padding-top:24px;
+            padding-bottom:24px;
+            border-top-left-radius:12px;
+            border-top-right-radius:12px;
+            border-bottom-right-radius:12px;
+            border-bottom-left-radius:12px;
+            margin-bottom:50px;
+        }
+        .reward-card {
+            display:flex;
+            flex-direction:row;
+            column-gap:24px;
+            align-items:center;
+            background-color:var(--bg-surface);
+            border-top-width:2px;
+            border-right-width:2px;
+            border-bottom-width:2px;
+            border-left-width:2px;
+            border-top-style:solid;
+            border-right-style:solid;
+            border-bottom-style:solid;
+            border-left-style:solid;
+            border-color:var(--border-color);
+            border-top-left-radius:16px;
+            border-top-right-radius:16px;
+            border-bottom-right-radius:16px;
+            border-bottom-left-radius:16px;
+            padding-top:24px;
+            padding-right:24px;
+            padding-bottom:24px;
+            padding-left:24px;
+            text-align:left;
+            margin-bottom:24px;
+        }
+        .reward-card-img {
+            width:50%;
+            aspect-ratio:4 / 3;
+            flex-shrink:0;
+            border-radius:12px;
+            overflow:hidden;
+            background-color:var(--bg-base);
+            display:flex;
+            justify-content:center;
+            align-items:center;
+        }
+        .reward-card-img img {
+            width:100%;
+            height:100%;
+            object-fit:contain;
+            display:block;
+        }
+        .reward-name {
+            font-size:26px;
+            font-weight:700;
+            color:var(--brand-text);
+            margin-bottom:8px;
+        }
+        .reward-desc {
+            font-size:20px;
+            color:var(--text-gray);
+            margin-bottom:14px;
+        }
+        .reward-price {
+            font-size:30px;
+            font-weight:700;
+            color:var(--brand-primary);
+        }
+        .reward-price-old {
+            position:relative;
+            display:inline-block;
+            font-size:22px;
+            color:var(--text-gray);
+            margin-bottom:8px;
+        }
+        .reward-price-old::after {
+            content:"";
+            position:absolute;
+            left:-6px;
+            right:-6px;
+            top:48%;
+            height:5px;
+            background-color:rgb(214, 51, 44);
+            border-top-left-radius:3px;
+            border-top-right-radius:6px;
+            border-bottom-right-radius:3px;
+            border-bottom-left-radius:6px;
+            transform:rotate(-4deg);
+        }
         .step-list {
             display:flex;
             flex-direction:column;
@@ -759,7 +854,9 @@
         <section data-section-id="7" class="battery-sec text-left relative w-full">
             <h2 data-text-id="section_7_title-sec" class="title-sec relative">초보 독서가도 외롭지 않게<br/>함께 읽고 공유하는 커뮤니티</h2>
             <p data-text-id="section_7_desc-text" class="desc-text relative" style="margin-bottom:60px;">챌린지 외에 나와 비슷한 취향을 가진 사람들과 모임을 만들어보세요. <br/>서로의 기록을 응원하며 혼자서는 어려웠던 독서 습관을 즐겁게 만들어갑니다.</p>
-            <div class="img-wrapper w-full relative" style="height:1440px;"><img src="https://piccopilot.oss-accelerate.aliyuncs.com/product/generatePic/a6e957f6114646948565b33e26961508.png?Expires=2100698139&amp;OSSAccessKeyId=LTAI5tAt4VGUZ2t5U68W4uFh&amp;Signature=PwPReg8GZLM2WuTLV5HflpPmB%2FQ%3D" alt="People reading and sharing app screen" data-img-id="img_07_1" class="img-main relative" style="object-position:bottom;"/></div>
+            <div class="img-wrapper w-full relative" style="height:960px;margin-bottom:24px;"><img src="이미지/어플홍보1.jpg" alt="앱 홍보 이미지 1" data-img-id="img_07_1" class="img-main relative"/></div>
+            <div class="img-wrapper w-full relative" style="height:1707px;margin-bottom:24px;"><img src="이미지/어플홍보2.jpg" alt="앱 홍보 이미지 2" data-img-id="img_07_2" class="img-main relative"/></div>
+            <div class="img-wrapper w-full relative" style="height:1440px;"><img src="이미지/어플홍보3.png" alt="앱 홍보 이미지 3" data-img-id="img_07_3" class="img-main relative"/></div>
         </section>
         <!-- Section 8: Target Audience -->
         <section data-section-id="8" class="sec-padding bg-white text-left relative w-full">
@@ -831,7 +928,7 @@
             <h2 data-text-id="section_9_title-sec" class="title-sec relative">펀딩 후원자만을 위한 <span class="char-pop" style="animation-delay:0s;">특</span><span class="char-pop" style="animation-delay:1s;">별</span> <span class="char-pop" style="animation-delay:2s;">혜</span><span class="char-pop" style="animation-delay:3s;">택</span></h2>
             <div class="unboxing-grid relative">
                 <div class="img-wrapper relative"><img src="리워드/리워드리포트.png" alt="리워드 리포트" data-img-id="img_09_2" class="img-sub relative"/></div>
-                <div class="img-wrapper relative"><img src="리워드/리워드테마.png" alt="리워드 테마" data-img-id="img_09_3" class="img-sub relative"/></div>
+                <div class="img-wrapper relative"><img src="리워드/리워드알림.png" alt="리워드 알림" data-img-id="img_09_3" class="img-sub relative"/></div>
                 <div class="img-wrapper relative"><img src="리워드/리워드티켓.png" alt="리워드 티켓" data-img-id="img_09_4" class="img-sub relative"/></div>
             </div>
             <div data-text-id="section_9_gift-box-1" class="gift-box relative">펀딩 100% 달성 시 후원자 전원에게 추가 스페셜 리워드가 증정됩니다.</div>
@@ -862,7 +959,7 @@
             <p data-text-id="section_4_desc-text" class="desc-text relative" style="margin-bottom:60px;">NFC 스마트 키링은 물론, 독서 노트를 직접 채울 수 있는 귀여운 독서 스티커가 포함되어 아날로그 기록의 낭만까지 챙겼습니다.</p>
             <h3 data-text-id="section_4_headline-1" class="title-sub relative" style="margin-top:20px;">붙이고 꾸미는 재미, 직접 쓰는 즐거움까지!</h3>
 
-            <div data-text-id="section_4_subhead-1" class="step-label relative" style="margin-top:30px;margin-bottom:20px;">깔끔하게 떼었다 붙였다! (리무버블 2종)</div>
+            <div data-text-id="section_4_subhead-1" class="step-label relative" style="margin-top:30px;margin-bottom:20px;">깔끔하게 떼었다 붙였다! (리무버블 3종)</div>
             <div class="relative" style="display:flex;flex-direction:column;row-gap:40px;margin-bottom:24px;">
                 <div class="relative">
                     <p data-text-id="section_4_sticker1-caption" class="step-desc relative">다이어리 꾸미기에 최적화된 귀여운 캐릭터.</p>
@@ -872,13 +969,17 @@
                     <p data-text-id="section_4_sticker2-caption" class="step-desc relative">책을 읽고 난 뒤 내 마음을 대변해줘요. 그냥 노트도 독서기록장으로 만들어주는 스티커!</p>
                     <div class="step-media relative" style="height:700px;"><img src="스티커/말풍선들.png" alt="말풍선 스티커" data-img-id="img_04_sticker2" class="img-main relative"/></div>
                 </div>
+                <div class="relative">
+                    <p data-text-id="section_4_sticker3-caption" class="step-desc relative">책을 읽은 날짜, 마음에 드는 페이지, 책 읽은 권수 등 귀여운 숫자 스티커로 기록해요!</p>
+                    <div class="step-media relative" style="width:576px;height:314px;margin-left:auto;margin-right:auto;"><img src="스티커/책숫자.png" alt="숫자 스티커" data-img-id="img_04_sticker2" class="img-main relative"/></div>
+                </div>
             </div>
 
             <div data-text-id="section_4_subhead-2" class="step-label relative" style="margin-top:40px;margin-bottom:20px;">내 손으로 직접 채우는 기록!<br/>연필, 펜으로 부드럽게 필기 가능한 종이 질감 스티커. (모조지 3종)</div>
             <div class="relative" style="display:flex;flex-direction:column;row-gap:40px;">
                 <div class="relative">
                     <p data-text-id="section_4_sticker3-caption" class="step-desc relative">내가 채우는 나만의 감 서재! 여러분이 서재에 간직하고 싶은 책을 기록해요.</p>
-                    <div class="step-media relative" style="height:700px;"><img src="스티커/감-rotated.png" alt="감 스티커" data-img-id="img_04_sticker3" class="img-main relative"/></div>
+                    <div class="step-media relative" style="width:600px;height: 400px;px;margin-left:auto;margin-right:auto;"><img src="스티커/감-rotated.png" alt="감 스티커" data-img-id="img_04_sticker3" class="img-main relative"/></div>
                 </div>
                 <div class="relative">
                     <p data-text-id="section_4_sticker5-caption" class="step-desc relative">책을 읽으며 들었던 생각은 무엇인가요? 독서 노트를 더욱 풍성하게 꾸며줄 스티커들!</p>
@@ -903,6 +1004,35 @@
             <h2 data-text-id="section_11_title-sec" class="title-sec relative">독서가 취미가 되는 세상을 위해</h2>
             <p data-text-id="section_11_desc-text" class="desc-text relative" style="text-align:center;margin-bottom:60px;">북짝북짝은 스마트폰에 빼앗긴 시간을 다시 의미 있는 기록으로 채우고자 합니다.<br/>북짝북짝과 함께 당신만의 독서 이야기를 완성하세요.</p>
             <div class="img-wrapper w-full relative" style="height:720px;border-radius:20px;"><img src="https://piccopilot.oss-accelerate.aliyuncs.com/product/generatePic/b1d0f0dc9fd14314ab9c0efb85094c80.png?Expires=2100698139&amp;OSSAccessKeyId=LTAI5tAt4VGUZ2t5U68W4uFh&amp;Signature=uuQJ5aW2VzPuGOrkeEWnKqJaPFc%3D" alt="Cinematic Wooden Bookshelf" data-img-id="img_11_1" class="img-main relative" style="object-position:bottom;"/></div>
+        </section>
+        <!-- Section 14: Reward List -->
+        <section data-section-id="14" class="sec-padding text-center bg-white relative w-full">
+            <div data-text-id="section_14_banner" class="reward-banner relative">와디즈 한정 리워드 리스트</div>
+            <div class="reward-card relative">
+                <div class="reward-card-img relative" style="width:70%;"><img src="리워드/NFC키링.png" alt="NFC 챌린지 키링" data-img-id="img_14_reward1" class="relative"/></div>
+                <div class="relative">
+                    <h4 data-text-id="section_14_reward1-name" class="reward-name relative">NFC 챌린지 키링</h4>
+                    <p data-text-id="section_14_reward1-desc" class="reward-desc relative">단품 구성</p>
+                    <div data-text-id="section_14_reward1-price" class="reward-price relative">19,900원</div>
+                </div>
+            </div>
+            <div class="reward-card relative">
+                <div class="reward-card-img relative" style="width:70%;"><img src="리워드/스티커모음.png" alt="독서 스티커 6종" data-img-id="img_14_reward2" class="relative"/></div>
+                <div class="relative">
+                    <h4 data-text-id="section_14_reward2-name" class="reward-name relative">독서 스티커 6종</h4>
+                    <p data-text-id="section_14_reward2-desc" class="reward-desc relative">단품 구성</p>
+                    <div data-text-id="section_14_reward2-price" class="reward-price relative">8,900원</div>
+                </div>
+            </div>
+            <div class="reward-card relative" style="margin-bottom:0;">
+                <div class="reward-card-img relative" style="width:70%;"><img src="리워드/스티커랑키링.png" alt="NFC 챌린지 키링 + 독서 스티커 6종 SET" data-img-id="img_14_reward3" class="relative"/></div>
+                <div class="relative">
+                    <h4 data-text-id="section_14_reward3-name" class="reward-name relative">NFC 챌린지 키링 + 독서 스티커 6종 SET</h4>
+                    <p data-text-id="section_14_reward3-desc" class="reward-desc relative">세트 구성</p>
+                    <div class="relative"><span class="reward-price-old relative">28,800원</span></div>
+                    <div data-text-id="section_14_reward3-price" class="reward-price relative">26,900원</div>
+                </div>
+            </div>
         </section>
         <!-- Section 12: Footer Policy -->
         <section data-section-id="12" class="footer-sec relative w-full">
@@ -935,20 +1065,19 @@
             <h2 data-text-id="section_13_title-sec" class="title-sec relative">제품 및 서비스 사양</h2>
             <div class="spec-table-container relative" style="margin-bottom:50px;">
                 <div class="spec-grid relative">
-                    <div class="spec-row"><span data-text-id="section_13_spec-label-1" class="spec-label">리워드 구성</span><span data-text-id="section_13_spec-val-1" class="spec-val">북짝북짝 NFC 키링 + 독서 스티커 5종 세트</span></div>
+                    <div class="spec-row"><span data-text-id="section_13_spec-label-1" class="spec-label">리워드 구성</span><span data-text-id="section_13_spec-val-1" class="spec-val">챌린지 NFC 키링 / 독서 스티커 6종 세트 / NFC 키링 + 스티커 6종 세트</span></div>
                     <div class="spec-row"><span data-text-id="section_13_spec-label-2" class="spec-label">지원 기기</span><span data-text-id="section_13_spec-val-2" class="spec-val">NFC 기능을 지원하는 iOS 및 Android 스마트폰</span></div>
                     <div class="spec-row"><span data-text-id="section_13_spec-label-3" class="spec-label">주요 기능</span><span data-text-id="section_13_spec-val-3" class="spec-val">NFC 태그로 북짝북짝 미션 페이지 연결, 도서 검색·기록, 내 서재 꾸미기, 독서모임 기록 공유</span></div>
                     <div class="spec-row"><span data-text-id="section_13_spec-label-4" class="spec-label">키링 소재</span><span data-text-id="section_13_spec-val-4" class="spec-val">투명 아크릴 커버와 은색 스냅 버튼으로 구성된 커스텀 NFC 키링</span></div>
-                    <div class="spec-row"><span data-text-id="section_13_spec-label-5" class="spec-label">NFC 사용법</span><span data-text-id="section_13_spec-val-5" class="spec-val">스마트폰의 NFC 인식 부위를 키링에 가까이 대면 북짝북짝 미션 페이지로 연결됩니다.</span></div>
-                    <div class="spec-row"><span data-text-id="section_13_spec-label-6" class="spec-label">스티커 구성</span><span data-text-id="section_13_spec-val-6" class="spec-val">독서 기록과 다이어리 꾸미기에 활용할 수 있는 북짝북짝 자체 디자인 스티커 총 5종</span></div>
-                    <div class="spec-row"><span data-text-id="section_13_spec-label-7" class="spec-label">칼선 스티커</span><span data-text-id="section_13_spec-val-7" class="spec-val">1·2번 디자인 — 개별 모양대로 떼어 사용할 수 있는 리무버블 칼선 스티커</span></div>
-                    <div class="spec-row"><span data-text-id="section_13_spec-label-8" class="spec-label">모조지 스티커</span><span data-text-id="section_13_spec-val-8" class="spec-val">3·4·5번 디자인 — 부드러운 종이 질감으로 제작되는 모조지 스티커</span></div>
-                    <div class="spec-row"><span data-text-id="section_13_spec-label-9" class="spec-label">스티커 크기</span><span data-text-id="section_13_spec-val-9" class="spec-val">5종 모두 A6 사이즈</span></div>
+                    <div class="spec-row"><span data-text-id="section_13_spec-label-5" class="spec-label">NFC 사용법</span><span data-text-id="section_13_spec-val-5" class="spec-val">스마트폰의 NFC 인식 부위를 키링에 가까이 대면 북짝북짝 챌린지 미션 페이지로 연결됩니다.</span></div>
+                    <div class="spec-row"><span data-text-id="section_13_spec-label-6" class="spec-label">스티커 구성</span><span data-text-id="section_13_spec-val-6" class="spec-val">독서 기록과 다이어리 꾸미기에 활용할 수 있는 북짝북짝 자체 디자인 스티커 총 6종</span></div>
+                    <div class="spec-row"><span data-text-id="section_13_spec-label-7" class="spec-label">칼선 스티커</span><span data-text-id="section_13_spec-val-7" class="spec-val">1, 2, 3번 디자인 — 개별 모양대로 떼어 사용할 수 있는 리무버블 칼선 스티커</span></div>
+                    <div class="spec-row"><span data-text-id="section_13_spec-label-8" class="spec-label">모조지 스티커</span><span data-text-id="section_13_spec-val-8" class="spec-val">4, 5, 6번 디자인 — 부드러운 종이 질감으로 제작되는 모조지 스티커</span></div>
+                    <div class="spec-row"><span data-text-id="section_13_spec-label-9" class="spec-label">스티커 크기</span><span data-text-id="section_13_spec-val-9" class="spec-val">6종 모두 A6 사이즈</span></div>
                 </div>
-                <p data-text-id="section_13_spec-note" class="spec-note relative">*NFC 기능은 NFC를 지원하는 스마트폰에서 사용할 수 있습니다. 기종, NFC 설정 및 휴대폰 케이스의 소재와 두께에 따라 인식 위치와 속도가 달라질 수 있습니다.<br/><br/>*스티커는 디자인에 따라 소재와 가공 방식이 다릅니다. 1·2번 디자인은 리무버블 칼선 스티커, 3·4·5번 디자인은 모조지 스티커로 제작됩니다.<br/><br/>*모조지 스티커는 종이 소재 특성상 물과 습기에 주의해 주세요. 화면에 표시되는 색상은 기기 환경과 실제 인쇄 결과에 따라 다소 차이가 있을 수 있으며, 제작 과정에서 세부 사양이 일부 변경될 수 있습니다.</p>
+                <p data-text-id="section_13_spec-note" class="spec-note relative">*NFC 기능은 NFC를 지원하는 스마트폰에서 사용할 수 있습니다. 기종, NFC 설정 및 휴대폰 케이스의 소재와 두께에 따라 인식 위치와 속도가 달라질 수 있습니다.<br/><br/>*스티커는 디자인에 따라 소재와 가공 방식이 다릅니다. 1, 2, 3번 디자인은 리무버블 칼선 스티커, 4, 5, 6번 디자인은 모조지 스티커로 제작됩니다.<br/><br/>*모조지 스티커는 종이 소재 특성상 물과 습기에 주의해 주세요. 화면에 표시되는 색상은 기기 환경과 실제 인쇄 결과에 따라 다소 차이가 있을 수 있으며, 제작 과정에서 세부 사양이 일부 변경될 수 있습니다.</p>
             </div>
             <div class="step-media relative" style="height:500px;margin-bottom:50px;"><img src="nfc키링 사이즈.png" alt="NFC 키링 실측 사이즈 안내" data-img-id="img_13_size" class="img-main relative"/></div>
-            <div class="img-wrapper w-full relative" style="height:720px;border-radius:24px;"><img src="https://piccopilot.oss-accelerate.aliyuncs.com/product/generatePic/19043f8c3a424bc2b0e04378ca401940.png?Expires=2099720363&amp;OSSAccessKeyId=LTAI5tAt4VGUZ2t5U68W4uFh&amp;Signature=0IPtgmrq%2BNr8VJmfBv6T5q5QHVE%3D" alt="패키지 전체 구성품과 앱의 완성된 뷰를 보여줌" data-img-id="img_13_1" class="img-main relative"/></div>
         </section>
     </div>
 </body>
