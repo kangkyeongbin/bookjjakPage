@@ -512,85 +512,118 @@
             border-bottom-left-radius:16px;
             margin-bottom:67px;
         }
-        .reward-card {
-            display:flex;
-            flex-direction:row;
-            column-gap:32px;
-            align-items:center;
+        .reward-tile {
             background-color:var(--bg-surface);
-            border-top-width:3px;
-            border-right-width:3px;
-            border-bottom-width:3px;
-            border-left-width:3px;
-            border-top-style:solid;
-            border-right-style:solid;
-            border-bottom-style:solid;
-            border-left-style:solid;
-            border-color:var(--border-color);
-            border-top-left-radius:21px;
-            border-top-right-radius:21px;
-            border-bottom-right-radius:21px;
-            border-bottom-left-radius:21px;
-            padding-top:32px;
-            padding-right:32px;
-            padding-bottom:32px;
-            padding-left:32px;
-            text-align:left;
-            margin-bottom:32px;
-        }
-        .reward-card-img {
-            width:50%;
-            aspect-ratio:4 / 3;
-            flex-shrink:0;
-            border-radius:16px;
+            border:3px solid var(--border-color);
+            border-radius:21px;
             overflow:hidden;
-            background-color:var(--bg-base);
+            text-align:left;
+            margin-bottom:53px;
+        }
+        .reward-tile-top {
+            display:flex;
+            align-items:center;
+            justify-content:space-between;
+            column-gap:32px;
+            padding:40px;
+        }
+        .reward-tile-badge {
+            display:inline-flex;
+            align-items:center;
+            justify-content:center;
+            width:76px;
+            height:76px;
+            background-color:var(--brand-primary);
+            color:#FFFFFF;
+            font-size:40px;
+            font-weight:700;
+            border-radius:16px;
+            margin-bottom:24px;
+        }
+        .reward-tile-name {
+            font-size:46px;
+            font-weight:700;
+            color:var(--brand-text);
+            line-height:1.4;
+        }
+        .reward-tile-img {
+            width:42%;
+            flex-shrink:0;
+            aspect-ratio:1 / 1;
             display:flex;
             justify-content:center;
             align-items:center;
         }
-        .reward-card-img img {
+        .reward-tile-img img {
             width:100%;
             height:100%;
             object-fit:contain;
             display:block;
         }
-        .reward-name {
-            font-size:59px;
+        .reward-tile-bar {
+            background-color:var(--brand-text);
+            color:#FFFFFF;
+            display:flex;
+            align-items:stretch;
+        }
+        .reward-tile-bar-col {
+            flex:1;
+            padding:32px 24px;
+            text-align:center;
+        }
+        .reward-tile-bar-col + .reward-tile-bar-col {
+            border-left:2px solid rgba(255, 255, 255, 0.2);
+        }
+        .reward-tile-bar.no-discount {
+            justify-content:flex-end;
+        }
+        .reward-tile-bar.no-discount .reward-tile-bar-col {
+            flex:none;
+            text-align:right;
+            padding:32px 40px;
+        }
+        .reward-tile-discount-label {
+            font-size:32px;
+            opacity:0.85;
+            margin-bottom:8px;
+        }
+        .reward-tile-discount-value {
+            font-size:55px;
+            font-weight:800;
+        }
+        .reward-tile-price-old {
+            font-size:34px;
+            color:rgba(255, 255, 255, 0.55);
+            text-decoration:line-through;
+            margin-bottom:8px;
+        }
+        .reward-tile-price {
+            font-size:55px;
+            font-weight:800;
+        }
+        .reward-promo-banner {
+            background-color:var(--brand-primary);
+            color:#FFFFFF;
+            border-radius:21px;
+            padding-top:48px;
+            padding-bottom:48px;
+            padding-left:32px;
+            padding-right:32px;
+            text-align:center;
+            margin-bottom:53px;
+        }
+        .reward-promo-tag {
+            font-size:40px;
             font-weight:700;
-            color:var(--brand-text);
-            margin-bottom:11px;
+            letter-spacing:4px;
+            text-transform:uppercase;
+            opacity:0.85;
+            margin-bottom:16px;
         }
-        .reward-desc {
-            font-size:46px;
-            color:var(--text-gray);
-            margin-bottom:19px;
-        }
-        .reward-price {
-            font-size:69px;
-            font-weight:700;
-            color:var(--brand-primary);
-        }
-        .reward-price-old {
-            position:relative;
-            display:inline-block;
-            font-size:50px;
-            color:var(--text-gray);
-            margin-bottom:11px;
-        }
-        .reward-price-old::after {
-            content:"";
-            position:absolute;
-            left:-8px;
-            right:-8px;
-            top:48%;
-            height:7px;
-            background-color:rgb(214, 51, 44);
-            border-top-left-radius:4px;
-            border-top-right-radius:8px;
-            border-bottom-right-radius:4px;
-            border-bottom-left-radius:8px;
-            transform:rotate(-4deg);
+        .reward-promo-title {
+            font-size:64px;
+            font-weight:800;
+            line-height:1.35;
         }
         .step-list {
             display:flex;
@@ -1044,29 +1077,136 @@
         <!-- Section 14: Reward List -->
         <section data-section-id="14" class="sec-padding text-center bg-white relative w-full">
             <div data-text-id="section_14_banner" class="reward-banner relative">와디즈 한정 리워드 리스트</div>
-            <div class="reward-card relative">
-                <div class="reward-card-img relative" style="width:70%;"><img src="리워드/NFC키링.png" alt="NFC 챌린지 키링" data-img-id="img_14_reward1" class="relative"/></div>
-                <div class="relative">
-                    <h4 data-text-id="section_14_reward1-name" class="reward-name relative">독서 챌린지 NFC 키링</h4>
-                    <p data-text-id="section_14_reward1-desc" class="reward-desc relative">단품 구성</p>
-                    <div data-text-id="section_14_reward1-price" class="reward-price relative">19,900원</div>
+            <div class="reward-promo-banner relative">
+                <div data-text-id="section_14_promo1-tag" class="reward-promo-tag relative">얼리버드</div>
+                <div data-text-id="section_14_promo1-title" class="reward-promo-title relative">72시간 한정 판매!</div>
+            </div>
+            <div class="reward-tile relative">
+                <div class="reward-tile-top relative">
+                    <div class="relative">
+                        <span class="reward-tile-badge relative">01</span>
+                        <h4 data-text-id="section_14_reward1-name" class="reward-tile-name relative">독서 챌린지 NFC 키링<br/>+ 독서 스티커 5종 세트</h4>
+                    </div>
+                    <div class="reward-tile-img relative"><img src="리워드/스티커랑키링.png" alt="NFC 챌린지 키링 + 독서 스티커 5종 SET" data-img-id="img_14_reward1" class="relative"/></div>
+                </div>
+                <div class="reward-tile-bar relative">
+                    <div class="reward-tile-bar-col relative">
+                        <div class="reward-tile-discount-label relative">할인율</div>
+                        <div data-text-id="section_14_reward1-discount" class="reward-tile-discount-value relative">17%</div>
+                    </div>
+                    <div class="reward-tile-bar-col relative">
+                        <div data-text-id="section_14_reward1-price-old" class="reward-tile-price-old relative">34,900원</div>
+                        <div data-text-id="section_14_reward1-price" class="reward-tile-price relative">28,900원</div>
+                    </div>
                 </div>
             </div>
-            <div class="reward-card relative">
-                <div class="reward-card-img relative" style="width:70%;"><img src="리워드/스티커모음.png" alt="독서 스티커 6종" data-img-id="img_14_reward2" class="relative"/></div>
-                <div class="relative">
-                    <h4 data-text-id="section_14_reward2-name" class="reward-name relative">독서 스티커 6종</h4>
-                    <p data-text-id="section_14_reward2-desc" class="reward-desc relative">단품 구성</p>
-                    <div data-text-id="section_14_reward2-price" class="reward-price relative">8,900원</div>
+            <div class="reward-tile relative">
+                <div class="reward-tile-top relative">
+                    <div class="relative">
+                        <span class="reward-tile-badge relative">02</span>
+                        <h4 data-text-id="section_14_reward2-name" class="reward-tile-name relative">독서 챌린지 NFC 키링</h4>
+                    </div>
+                    <div class="reward-tile-img relative"><img src="리워드/NFC키링.png" alt="NFC 챌린지 키링" data-img-id="img_14_reward2" class="relative"/></div>
+                </div>
+                <div class="reward-tile-bar relative">
+                    <div class="reward-tile-bar-col relative">
+                        <div class="reward-tile-discount-label relative">할인율</div>
+                        <div data-text-id="section_14_reward2-discount" class="reward-tile-discount-value relative">10%</div>
+                    </div>
+                    <div class="reward-tile-bar-col relative">
+                        <div data-text-id="section_14_reward2-price-old" class="reward-tile-price-old relative">19,900원</div>
+                        <div data-text-id="section_14_reward2-price" class="reward-tile-price relative">17,900원</div>
+                    </div>
                 </div>
             </div>
-            <div class="reward-card relative" style="margin-bottom:0;">
-                <div class="reward-card-img relative" style="width:70%;"><img src="리워드/스티커랑키링.png" alt="NFC 챌린지 키링 + 독서 스티커 6종 SET" data-img-id="img_14_reward3" class="relative"/></div>
-                <div class="relative">
-                    <h4 data-text-id="section_14_reward3-name" class="reward-name relative">NFC 챌린지 키링 + 독서 스티커 6종 SET</h4>
-                    <p data-text-id="section_14_reward3-desc" class="reward-desc relative">세트 구성</p>
-                    <div class="relative"><span class="reward-price-old relative">28,800원</span></div>
-                    <div data-text-id="section_14_reward3-price" class="reward-price relative">26,900원</div>
+            <div class="reward-promo-banner relative">
+                <div data-text-id="section_14_promo2-tag" class="reward-promo-tag relative">일반 판매</div>
+                <div data-text-id="section_14_promo2-title" class="reward-promo-title relative">와디즈 한정 판매</div>
+            </div>
+            <div class="reward-tile relative">
+                <div class="reward-tile-top relative">
+                    <div class="relative">
+                        <span class="reward-tile-badge relative">03</span>
+                        <h4 data-text-id="section_14_reward3-name" class="reward-tile-name relative">독서 챌린지 NFC 키링<br/>+ 독서 스티커 5종 세트</h4>
+                    </div>
+                    <div class="reward-tile-img relative"><img src="리워드/스티커랑키링.png" alt="NFC 챌린지 키링 + 독서 스티커 5종 SET" data-img-id="img_14_reward3" class="relative"/></div>
+                </div>
+                <div class="reward-tile-bar relative">
+                    <div class="reward-tile-bar-col relative">
+                        <div class="reward-tile-discount-label relative">할인율</div>
+                        <div data-text-id="section_14_reward3-discount" class="reward-tile-discount-value relative">11%</div>
+                    </div>
+                    <div class="reward-tile-bar-col relative">
+                        <div data-text-id="section_14_reward3-price-old" class="reward-tile-price-old relative">34,900원</div>
+                        <div data-text-id="section_14_reward3-price" class="reward-tile-price relative">30,900원</div>
+                    </div>
+                </div>
+            </div>
+            <div class="reward-tile relative">
+                <div class="reward-tile-top relative">
+                    <div class="relative">
+                        <span class="reward-tile-badge relative">04</span>
+                        <h4 data-text-id="section_14_reward4-name" class="reward-tile-name relative">독서 챌린지 NFC 키링</h4>
+                    </div>
+                    <div class="reward-tile-img relative"><img src="리워드/NFC키링.png" alt="NFC 챌린지 키링" data-img-id="img_14_reward4" class="relative"/></div>
+                </div>
+                <div class="reward-tile-bar no-discount relative">
+                    <div class="reward-tile-bar-col relative">
+                        <div data-text-id="section_14_reward4-price" class="reward-tile-price relative">19,900원</div>
+                    </div>
+                </div>
+            </div>
+            <div class="reward-tile relative">
+                <div class="reward-tile-top relative">
+                    <div class="relative">
+                        <span class="reward-tile-badge relative">05</span>
+                        <h4 data-text-id="section_14_reward5-name" class="reward-tile-name relative">독서 스티커 5종 SET</h4>
+                    </div>
+                    <div class="reward-tile-img relative"><img src="리워드/스티커모음.png" alt="독서 스티커 5종 SET" data-img-id="img_14_reward5" class="relative"/></div>
+                </div>
+                <p data-text-id="section_14_reward5-desc" class="relative" style="font-size:36px;color:var(--text-gray);padding-left:40px;padding-right:40px;padding-bottom:24px;">독서 스티커 5종이 모두 구성되어있는 세트</p>
+                <div class="reward-tile-bar relative">
+                    <div class="reward-tile-bar-col relative">
+                        <div class="reward-tile-discount-label relative">할인율</div>
+                        <div data-text-id="section_14_reward5-discount" class="reward-tile-discount-value relative">14%</div>
+                    </div>
+                    <div class="reward-tile-bar-col relative">
+                        <div data-text-id="section_14_reward5-price-old" class="reward-tile-price-old relative">15,000원</div>
+                        <div data-text-id="section_14_reward5-price" class="reward-tile-price relative">12,900원</div>
+                    </div>
+                </div>
+            </div>
+            <div class="reward-tile relative">
+                <div class="reward-tile-top relative">
+                    <div class="relative">
+                        <span class="reward-tile-badge relative">06</span>
+                        <h4 data-text-id="section_14_reward6-name" class="reward-tile-name relative">독서 스티커 1종</h4>
+                    </div>
+                    <div class="reward-tile-img relative"><img src="리워드/스티커모음.png" alt="독서 스티커 1종" data-img-id="img_14_reward6" class="relative"/></div>
+                </div>
+                <div class="reward-tile-bar no-discount relative">
+                    <div class="reward-tile-bar-col relative">
+                        <div data-text-id="section_14_reward6-price" class="reward-tile-price relative">3,000원</div>
+                    </div>
+                </div>
+            </div>
+            <div class="reward-tile relative" style="margin-bottom:0;">
+                <div class="reward-tile-top relative">
+                    <div class="relative">
+                        <span class="reward-tile-badge relative">07</span>
+                        <h4 data-text-id="section_14_reward7-name" class="reward-tile-name relative">독서 스티커 3종</h4>
+                    </div>
+                    <div class="reward-tile-img relative"><img src="리워드/스티커모음.png" alt="독서 스티커 3종" data-img-id="img_14_reward7" class="relative"/></div>
+                </div>
+                <div class="reward-tile-bar relative">
+                    <div class="reward-tile-bar-col relative">
+                        <div class="reward-tile-discount-label relative">할인율</div>
+                        <div data-text-id="section_14_reward7-discount" class="reward-tile-discount-value relative">12%</div>
+                    </div>
+                    <div class="reward-tile-bar-col relative">
+                        <div data-text-id="section_14_reward7-price-old" class="reward-tile-price-old relative">9,000원</div>
+                        <div data-text-id="section_14_reward7-price" class="reward-tile-price relative">7,900원</div>
+                    </div>
                 </div>
             </div>
         </section>
