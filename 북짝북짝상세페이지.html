@@ -813,6 +813,271 @@
                 transform:scaleX(1);
             }
         }
+
+        /* =========================
+           북짝북짝 APP 연동 섹션
+        ========================= */
+
+        .app-connect-section {
+            width: 100%;
+            padding: 107px 0;
+            background: #fff;
+            box-sizing: border-box;
+        }
+
+        .app-connect-inner {
+            width: 100%;
+            max-width: 1280px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        /* 상단 라벨 */
+
+        .app-connect-label {
+            display: inline-block;
+            margin-bottom: 32px;
+            padding: 16px 40px;
+
+            background: #FFF9EA;
+            border-radius: 999px;
+
+            font-size: 40px;
+            font-weight: 700;
+            letter-spacing: 3px;
+
+            color: #8AB981;
+        }
+
+        /* 메인 제목 */
+
+        .app-connect-title {
+            margin: 0;
+
+            font-size: 110px;
+            line-height: 1.35;
+            font-weight: 800;
+
+            color: #111;
+            word-break: keep-all;
+        }
+
+        /* 설명 */
+
+        .app-connect-description {
+            margin: 40px 0 80px;
+
+            font-size: 50px;
+            line-height: 1.8;
+            font-weight: 400;
+
+            color: #666;
+            word-break: keep-all;
+        }
+
+        .app-connect-description strong {
+            color: #222;
+            font-weight: 700;
+        }
+
+        /* 앱 소개 카드 */
+
+        .app-connect-card {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: center;
+
+            gap: 67px;
+
+            padding: 67px 0;
+
+            background: none;
+            border-radius: 32px;
+
+            box-sizing: border-box;
+        }
+
+        /* App Store 이미지 */
+
+        .app-store-image {
+            order: 2;
+            width: 100%;
+            max-width: 880px;
+            margin: 0 auto;
+        }
+
+        .app-store-image img {
+            display: block;
+
+            width: 100%;
+            height: auto;
+
+            border-radius: 22px;
+        }
+
+        /* 오른쪽 설명 */
+
+        .app-connect-content {
+            flex: 1;
+            width: 100%;
+
+            text-align: left;
+        }
+
+        .app-connect-small {
+            display: block;
+
+            margin-bottom: 27px;
+
+            font-size: 55px;
+            font-weight: 700;
+
+            color: #8AB981;
+        }
+
+        .app-connect-content h3 {
+            margin: 0 0 40px;
+
+            font-size: 100px;
+            line-height: 1.45;
+            font-weight: 800;
+
+            color: #111;
+            word-break: keep-all;
+        }
+
+        .app-connect-content p {
+            margin: 0 0 40px;
+
+            font-size: 55px;
+            line-height: 1.7;
+
+            color: #666;
+            word-break: keep-all;
+        }
+
+        /* App Store 버튼 */
+
+        .app-store-button {
+            display: inline-flex;
+
+            align-items: center;
+            justify-content: center;
+
+            min-width: 420px;
+            height: 130px;
+
+            padding: 0 56px;
+
+            background: #111;
+            border-radius: 999px;
+
+            color: #fff;
+            font-size: 44px;
+            font-weight: 700;
+
+            text-decoration: none;
+
+            transition:
+                transform 0.2s ease,
+                opacity 0.2s ease;
+        }
+
+        .app-store-button:hover {
+            transform: translateY(-2px);
+            opacity: 0.85;
+        }
+
+        /* 하단 문구 */
+
+        .app-connect-bottom {
+            margin: 53px 0 0;
+
+            font-size: 60px;
+            line-height: 1.7;
+
+            color: #777;
+        }
+
+        .app-connect-bottom strong {
+            display: block;
+
+            margin-top: 8px;
+
+            color: #333;
+        }
+
+        /* =========================
+           모바일
+        ========================= */
+
+        @media (max-width: 768px) {
+
+            .app-connect-section {
+                padding: 70px 20px;
+            }
+
+            .app-connect-title {
+                font-size: 30px;
+            }
+
+            .app-connect-description {
+                margin-top: 20px;
+                margin-bottom: 36px;
+
+                font-size: 16px;
+                line-height: 1.7;
+            }
+
+            .mobile-hide {
+                display: none;
+            }
+
+            .app-connect-card {
+                flex-direction: column;
+
+                gap: 30px;
+
+                padding: 26px 20px 30px;
+
+                border-radius: 24px;
+            }
+
+            .app-store-image {
+                width: 100%;
+                max-width: 420px;
+            }
+
+            .app-connect-content {
+                width: 100%;
+
+                text-align: center;
+            }
+
+            .app-connect-content h3 {
+                font-size: 24px;
+            }
+
+            .app-connect-content p {
+                font-size: 15px;
+            }
+
+            .app-store-button {
+                width: 100%;
+                max-width: 330px;
+
+                height: 54px;
+
+                box-sizing: border-box;
+            }
+
+            .app-connect-bottom {
+                margin-top: 30px;
+
+                font-size: 15px;
+            }
+        }
         </style>
 </head>
 <body>
@@ -820,7 +1085,7 @@
         <!-- Section 1: Header Hero -->
         <section data-section-id="1" class="header-sec relative w-full">
             <div data-text-id="section_1_top-badge" class="top-badge" style="font-size:100px;background-color:var(--brand-primary);">당신의 독서 라이프 파트너</div>
-            <div data-text-id="section_1_section-tag" class="section-tag" style="font-size:56px;">[ BOOKJJAK NFC KIT ]</div>
+            <div data-text-id="section_1_section-tag" class="section-tag" style="font-size:56px;">[ 북짝북짝 NFC 독서 KIT ]</div>
             <div class="header-logo-wrap relative"><img src="https://piccopilot.oss-accelerate.aliyuncs.com/product/default/563857a1f89d4bc28a8d93b9582825f5.png?Expires=2100699015&amp;OSSAccessKeyId=LTAI5tAt4VGUZ2t5U68W4uFh&amp;Signature=LVQUuT5asVqM3%2BGLNxRc%2BcQfeDk%3D" alt="Brand Mascot Logo" data-img-id="img_01_1" class="img-logo relative" style="width:400px;height:auto;object-fit:initial;"/></div>
             <h1 data-text-id="section_1_title-main" class="title-main" style="font: size 85px;">책 한 권,<br/> 끝까지 읽어본 적 있나요?</h1>
             <p data-text-id="section_1_section-tag-bottom" class="section-tag" style="color:var(--text-gray);margin-bottom:53px;"><span style="color:rgb(102, 102, 102);letter-spacing:0px;text-transform:none;">작심삼일 독서러를 위한 확실한 처방전</span></p>
@@ -870,11 +1135,6 @@
             <h3 data-text-id="section_3_anytime-title" class="title-sub relative" style="font-size:137px;color:rgb(0, 0, 0);"><span class="underline-blink" style="--blink-delay:0s;">언제</span> <span class="underline-blink" style="--blink-delay:1s;">어디에서나</span></h3>
             <p data-text-id="section_3_anytime-desc" class="desc-text relative" style="margin-bottom:53px;">시공간 제약없이 기록하고 공유할 수 있어요.</p>
             <div class="img-wrapper relative" style="width:1440px;height:1440px;margin-left:-80px;margin-right:-80px;margin-bottom:40px;"><img src="이미지/가방에키링.gif" alt="가방에 키링을 매다는 모습" data-img-id="img_03_bag-keyring" class="img-main relative"/></div>
-            <div class="img-wrapper w-full relative" style="height:853px;margin-bottom:40px;"><img src="https://piccopilot.oss-accelerate.aliyuncs.com/product/generatePic/c2ae1ded51414c8783db7f4f145d705a.png?Expires=2100696011&amp;OSSAccessKeyId=LTAI5tAt4VGUZ2t5U68W4uFh&amp;Signature=X4o1uB9Eu8UPBpGoCu0%2BBAERG4k%3D" alt="스마트폰을 마스코트 책 키링에 태그하는 손의 클로즈업" data-img-id="img_03_1" class="img-main relative"/></div>
-            <div class="relative" style="display:grid;grid-template-columns:1fr 1fr;gap:32px;margin-bottom:40px;">
-                <div class="img-wrapper relative" style="height:624px;border-radius:21px;"><img src="https://piccopilot.oss-accelerate.aliyuncs.com/product/generatePic/28b68feb15bf46aaa1f55710fa3cbea9.png?Expires=2100696011&amp;OSSAccessKeyId=LTAI5tAt4VGUZ2t5U68W4uFh&amp;Signature=kh3W3WQ2KseRozH6F8vLA6T28Vk%3D" alt="펜을 들고 독서 노트 팸플릿에 책 제목을 적고 있는 모습" data-img-id="img_03_3" class="img-main relative"/></div>
-                <div class="img-wrapper relative" style="height:624px;border-radius:21px;"><img src="https://piccopilot.oss-accelerate.aliyuncs.com/product/generatePic/c7ecec06c4974586935111fd436bfdcc.png?Expires=2100696011&amp;OSSAccessKeyId=LTAI5tAt4VGUZ2t5U68W4uFh&amp;Signature=amn8FSYB46yXm6ddV7ORDV08cHE%3D" alt="미션을 성공적으로 마치고 환호하는 앱 캐릭터 그래픽" data-img-id="img_03_4" class="img-main relative"/></div>
-            </div>
             <h3 data-text-id="section_3_intro-title" class="title-sub relative" style="font-size:137px;color:rgb(0, 0, 0);">단 <span class="char-pop-2" style="animation-delay:0s;">1</span><span class="char-pop-2" style="animation-delay:1s;">초</span>면 충분합니다</h3>
             <p data-text-id="section_3_intro-desc" class="desc-text relative" style="margin-bottom:53px;">NFC키링을 스마트폰에 태깅하면 <br/>챌린지 앱으로 즉시 이동해요.</p>
             <div class="relative" style="width:100%;margin-bottom:40px;"><img src="이미지/NFC태그_실물.gif" alt="NFC 태그 실물" data-img-id="img_03_nfc-real" class="relative" style="width:100%;height:auto;display:block;"/></div>
@@ -902,11 +1162,75 @@
             <div class="img-wrapper relative" style="width:768px;height:1025px;margin-left:auto;margin-right:auto;"><img src="방꾸.gif" alt="Reading Record App Interface" data-img-id="img_05_1" class="img-main relative"/></div>
             <div class="img-wrapper w-full relative" style="height:960px;margin-top:40px;"><img src="상세_실물2.png" alt="독서 인증 실물 사진" data-img-id="img_03_2" class="img-main relative"/></div>
         </section>
+        <!-- Section 10: Challenge Specs -->
+        <section data-section-id="10" class="sec-padding text-center bg-white relative w-full">
+            <i class="fa-solid fa-trophy icon-top relative" style="color:var(--brand-secondary);"></i>
+            <div data-text-id="section_10_section-tag" class="section-tag relative">31 DAYS CHALLENGE</div>
+            <h2 data-text-id="section_10_title-sec" class="title-sec relative">완주자를 위한 특별한 보상</h2>
+            <div class="spec-table-container relative" style="margin-bottom:67px;">
+                <h4 data-text-id="section_10_spec-title" class="spec-title relative">31일 독서 챌린지 완주 리워드</h4>
+                <div class="spec-grid relative">
+                    <div class="spec-row"><span data-text-id="section_10_spec-label-1" class="spec-label">특별 템플릿</span><span data-text-id="section_10_spec-val-1" class="spec-val">독서 기록 노트 템플릿(PDF 및 어플 내장) 제공</span></div>
+                    <div class="spec-row"><span data-text-id="section_10_spec-label-2" class="spec-label">앱 내 칭호</span><span data-text-id="section_10_spec-val-2" class="spec-val">완주자 한정 스페셜 칭호 부여</span></div>
+                    <div class="spec-row"><span data-text-id="section_10_spec-label-3" class="spec-label">방 꾸미기</span><span data-text-id="section_10_spec-val-3" class="spec-val">어플 내 가상 방 꾸미기 한정판 아이템 세트 (주차별 제공 예정)</span></div>
+                    <div class="spec-row"><span data-text-id="section_10_spec-label-5" class="spec-label">참여 조건</span><span data-text-id="section_10_spec-val-5" class="spec-val">하루 1회 NFC 태깅 및 미션 완료</span></div>
+                    <div class="spec-row"><span data-text-id="section_10_spec-label-6" class="spec-label">완주 기준</span><span data-text-id="section_10_spec-val-6" class="spec-val">31일 연속 미션 달성 시 자동 지급</span></div>
+                <p data-text-id="section_10_spec-note" class="spec-note relative">*안내: 지급되는 디지털 리워드 및 어플 UI는 어플 업데이트 상황에 따라 디자인이 일부 변경될 수 있습니다.</p>
+            </div>
+        </section>
         <!-- Section 8: Target Audience -->
         <section data-section-id="8" class="sec-padding bg-white text-left relative w-full">
             <h2 data-text-id="section_8_title-sec" class="title-sec relative">첫 독서 습관을 위한<br/>최고의 페이스메이커</h2>
             <p data-text-id="section_8_desc-text" class="desc-text relative" style="margin-bottom:80px;">독서 습관을 처음 들이고 싶은 초보 독서가와 함께 읽는 즐거움을 아는 커뮤니티형 독자들 모두,<br/>매일매일 부담 없는 간단한 인증으로 책과 친해져보세요.</p>
-            
+            <div class="img-wrapper w-full relative" style="height:853px;margin-bottom:40px;"><img src="https://piccopilot.oss-accelerate.aliyuncs.com/product/generatePic/c2ae1ded51414c8783db7f4f145d705a.png?Expires=2100696011&amp;OSSAccessKeyId=LTAI5tAt4VGUZ2t5U68W4uFh&amp;Signature=X4o1uB9Eu8UPBpGoCu0%2BBAERG4k%3D" alt="스마트폰을 마스코트 책 키링에 태그하는 손의 클로즈업" data-img-id="img_03_1" class="img-main relative"/></div>
+            <div class="relative" style="display:grid;grid-template-columns:1fr 1fr;gap:32px;margin-bottom:40px;">
+                <div class="img-wrapper relative" style="height:624px;border-radius:21px;"><img src="https://piccopilot.oss-accelerate.aliyuncs.com/product/generatePic/28b68feb15bf46aaa1f55710fa3cbea9.png?Expires=2100696011&amp;OSSAccessKeyId=LTAI5tAt4VGUZ2t5U68W4uFh&amp;Signature=kh3W3WQ2KseRozH6F8vLA6T28Vk%3D" alt="펜을 들고 독서 노트 팸플릿에 책 제목을 적고 있는 모습" data-img-id="img_03_3" class="img-main relative"/></div>
+                <div class="img-wrapper relative" style="height:624px;border-radius:21px;"><img src="https://piccopilot.oss-accelerate.aliyuncs.com/product/generatePic/c7ecec06c4974586935111fd436bfdcc.png?Expires=2100696011&amp;OSSAccessKeyId=LTAI5tAt4VGUZ2t5U68W4uFh&amp;Signature=amn8FSYB46yXm6ddV7ORDV08cHE%3D" alt="미션을 성공적으로 마치고 환호하는 앱 캐릭터 그래픽" data-img-id="img_03_4" class="img-main relative"/></div>
+            </div>
+
+            <section class="app-connect-section">
+                <div class="app-connect-inner">
+
+                    <div class="app-connect-card">
+
+                        <div class="app-store-image">
+                            <img
+                                src="이미지/앱스토어.jpg"
+                                alt="App Store 북짝북짝 앱"
+                            >
+                        </div>
+
+                        <div class="app-connect-content">
+                            <span class="app-connect-small">북짝북짝 공식 APP</span>
+
+                            <h3>
+                                북짝북짝 NFC 키링은 북짝북짝 앱과 연동하여<br/>사용할 수 있어요.
+                            </h3>
+
+                            <p>
+                                NFC 키링을 통한 독서 챌린지뿐만 아니라<br>
+                                북짝북짝 어플을 통한 독서 모임 인증으로도 <br/>
+                                함께하는 독서의 즐거움을 느낄 수 있어요.
+                            </p>
+                        </div>
+
+                    </div>
+                    <a
+                                href="https://apps.apple.com/kr/app/%EB%B6%81%EC%A7%9D%EB%B6%81%EC%A7%9D/id6779068602"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                class="app-store-button"
+                            >
+                                App Store에서 만나보기
+                            </a>
+                    <p class="app-connect-bottom">
+                        즐거운 독서 루틴,
+                        <strong>북짝북짝과 함께 시작해보세요.</strong>
+                    </p>
+
+                </div>
+            </section>
+
             <div class="text-center relative" style="margin-top:107px;">
                 <h3 data-text-id="section_8_time-title" class="title-sub relative">읽은 시간이 쌓이면, <br/>나만의 독서 습관이 보여요</h3>
                 <p data-text-id="section_8_time-desc" class="desc-text relative" style="margin-bottom:67px;">책을 펼친 순간 '읽기 시작'을 누르면 독서 시간이 자동으로 기록돼요.<br/>오늘 읽은 시간부터 이번 주의 독서 흐름까지 한눈에 확인할 수 있어요.</p>
@@ -980,27 +1304,77 @@
             <div data-text-id="section_9_gift-box-2" class="gift-box relative">꾸준한 독서 습관을 위한 전용 챌린지와 독려 알림 케어를 제공합니다.</div>
             <div data-text-id="section_9_gift-box-3" class="gift-box relative">오직 펀딩 참여자만을 위한 프리미엄 독서 클럽 참석권이 제공됩니다.</div>
         </section>
-        <!-- Section 10: Challenge Specs -->
-        <section data-section-id="10" class="sec-padding text-center bg-white relative w-full">
-            <i class="fa-solid fa-trophy icon-top relative" style="color:var(--brand-secondary);"></i>
-            <div data-text-id="section_10_section-tag" class="section-tag relative">31 DAYS CHALLENGE</div>
-            <h2 data-text-id="section_10_title-sec" class="title-sec relative">완주자를 위한 특별한 보상</h2>
-            <div class="spec-table-container relative" style="margin-bottom:67px;">
-                <h4 data-text-id="section_10_spec-title" class="spec-title relative">31일 독서 챌린지 완주 리워드</h4>
-                <div class="spec-grid relative">
-                    <div class="spec-row"><span data-text-id="section_10_spec-label-1" class="spec-label">특별 템플릿</span><span data-text-id="section_10_spec-val-1" class="spec-val">독서 기록 노트 템플릿(PDF 및 어플 내장) 제공</span></div>
-                    <div class="spec-row"><span data-text-id="section_10_spec-label-2" class="spec-label">앱 내 칭호</span><span data-text-id="section_10_spec-val-2" class="spec-val">완주자 한정 스페셜 칭호 부여</span></div>
-                    <div class="spec-row"><span data-text-id="section_10_spec-label-3" class="spec-label">방 꾸미기</span><span data-text-id="section_10_spec-val-3" class="spec-val">어플 내 가상 방 꾸미기 한정판 아이템 세트 (주차별 제공 예정)</span></div>
-                    <div class="spec-row"><span data-text-id="section_10_spec-label-5" class="spec-label">참여 조건</span><span data-text-id="section_10_spec-val-5" class="spec-val">하루 1회 NFC 태깅 및 미션 완료</span></div>
-                    <div class="spec-row"><span data-text-id="section_10_spec-label-6" class="spec-label">완주 기준</span><span data-text-id="section_10_spec-val-6" class="spec-val">31일 연속 미션 달성 시 자동 지급</span></div>
-                <p data-text-id="section_10_spec-note" class="spec-note relative">*안내: 지급되는 디지털 리워드 및 어플 UI는 어플 업데이트 상황에 따라 디자인이 일부 변경될 수 있습니다.</p>
-            </div>
-        </section>
         <!-- Section 4: Offline Kit -->
         <section data-section-id="4" class="sec-padding text-center bg-white relative w-full" style="padding-top:107px;">
             <i class="fa-solid fa-box-open icon-top relative" style="color:var(--brand-secondary);"></i>
             <h2 data-text-id="section_4_title-sec" class="title-sec relative">다이어리 꾸미기를 위한<br/>풍성한 오프라인 키트</h2>
             <p data-text-id="section_4_desc-text" class="desc-text relative" style="margin-bottom:80px;">NFC 스마트 키링은 물론, 독서 노트를 직접 채울 수 있는 귀여운 독서 스티커가 포함되어 아날로그 기록의 낭만까지 챙겼습니다.</p>
+            <!-- NFC KEYRING + STICKER SET -->
+<div class="relative" style="width:1440px;margin-left:-80px;margin-right:-80px;margin-top:80px;margin-bottom:107px;background-color:var(--bg-base);padding:107px 80px;box-sizing:border-box;">
+
+    <!-- 작은 영문 타이틀 -->
+    <div class="section-tag relative"
+         style="color:var(--brand-primary);margin-bottom:21px;">
+        NFC 키링 + 스티커 SET
+    </div>
+
+    <!-- 메인 타이틀 -->
+    <h3 class="title-sub relative"
+        style="font-size:84px;color:var(--brand-text);margin-bottom:32px;line-height:1.45;">
+        키링도 내 취향대로,<br/>
+        <span style="color:var(--brand-primary);">직접 꾸며보세요!</span>
+    </h3>
+
+    <!-- 설명 -->
+    <p class="desc-text relative"
+       style="margin-bottom:53px;">
+        북짝북짝 NFC 키링과 독서 스티커를 함께 활용해보세요.<br/>
+        마음에 드는 스티커를 골라 키링을 꾸미면<br/>
+        <strong style="color:var(--brand-text);">
+            세상에 하나뿐인 나만의 독서 키링 완성!
+        </strong>
+    </p>
+
+    <!-- 실제 스티커 붙이는 GIF -->
+    <div class="img-wrapper relative"
+         style="
+            width:100%;
+            height:auto;
+            border-radius:27px;
+            overflow:hidden;
+            margin-bottom:53px;
+         ">
+        <img src="이미지/키링작성실물.gif"
+             alt="북짝북짝 NFC 키링에 독서 스티커를 붙여 꾸미는 모습"
+             data-img-id="img_04_keyring-sticker-set"
+             class="relative"
+             style="
+                width:100%;
+                height:auto;
+                display:block;
+                object-fit:contain;
+             "/>
+    </div>
+
+    <!-- GIF 아래 강조문구 -->
+    <div class="relative"
+         style="margin-bottom:40px;">
+
+        <div class="step-label relative"
+             style="margin-bottom:16px;color:var(--brand-primary);">
+            들고 다니는 독서 기록
+        </div>
+
+        <p class="desc-text relative"
+           style="font-size:46px;">
+           언제 어디서나 NFC키링과 함께 기록해요. <br/>
+           NFC를 통해 온라인으로도 기록하고 <br/>
+           마음에 드는 문장은 오프라인으로도 기록해요.
+        </p>
+
+    </div>
+
+</div>
             <h3 data-text-id="section_4_headline-1" class="title-sub relative" style="margin-top:27px;">붙이고 꾸미는 재미, 직접 쓰는 즐거움까지!</h3>
             <div class="relative" style="width:100%;margin-top:40px;"><img src="스티커/스티커시작.png" alt="스티커 시작" data-img-id="img_04_sticker-start" class="relative" style="width:100%;height:auto;display:block;"/></div>
 
